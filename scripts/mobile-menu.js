@@ -10,6 +10,8 @@ burgerButton.addEventListener('click', () => {
   const isActive = burgerButton.classList.contains(MENU_ACTIVE)
 
   if (isActive) {
+    document.body.classList.remove('scrollOff')
+
     burgerButton.classList.remove(MENU_ACTIVE);
 
     menu.classList.remove(MENU_ACTIVE);
