@@ -32,7 +32,7 @@ li {
   --mt-blue: #2980ba;
   --mt-black: #212628;
   --mt-white: #ffffff;
-  --mt-background: #f3fafe;
+  --mt-background: #EBF6FF;
   --mt-light-grey: #9bbbd9; 
 }
 
@@ -349,6 +349,7 @@ li {
 }
 
 .header-logo {
+  width: 135px;
   max-height: 30px;
 }
 
@@ -540,22 +541,32 @@ li {
 
 .trust-image.mailru {
   grid-area: trust-image-mailru;
+
+  width: 135px;
 }
 
 .trust-image.odnoklassniki {
   grid-area: trust-image-odnoklassniki;
+
+  width: 185px;
 }
 
 .trust-image.vkontakte {
   grid-area: trust-image-vkontakte;
+
+  width: 150px;
 }
 
 .trust-image.backit {
   grid-area: trust-image-backit;
+
+  width: 90px;
 }
 
 .trust-image.kazanexpress {
   grid-area: trust-image-kazanexpress;
+
+  width: 165px;
 }
 
 .legally-container,
@@ -566,6 +577,8 @@ li {
   background: url('./assets/images/LegallyCurcle.png');
   background-color: var(--mt-background);
 
+  background-repeat: no-repeat;
+
   border-radius: 25px;
 
   padding: 80px 90px;
@@ -574,6 +587,11 @@ li {
 }
 
 /* ******** LEGALLY ******** */
+
+.legally-container {
+  background-position-y: center;
+  background-position-x: 95%;
+}
 
 .legally-typography-title span {
   color: var(--mt-green);
@@ -599,12 +617,16 @@ li {
 .legally-card-image.first {
   position: absolute;
 
+  width: 218px;
+
   right: 105px;
   top: 55px;
 }
 
 .legally-card-image.second {
   position: relative;
+
+  width: 218px;
 }
 
 .legally-typography-subtitle {
@@ -694,7 +716,8 @@ li {
 /* ******** VIDEO ******** */
 
 .video-container {
-  background-position: bottom;
+  background-position-y: center;
+  background-position-x: 92.5%;
 }
 
 .video-typography,
@@ -921,7 +944,8 @@ li {
 .payment-container {
   position: static;
 
-  background-size: cover;
+  background-position-x: 115%;
+  background-position-y: center;
 }
 
 .payment-typography {
@@ -996,6 +1020,7 @@ li {
 
   column-gap: 25px;
 }
+
 .pros-card-title {
   margin-bottom: 15px;
 }
@@ -1016,6 +1041,18 @@ li {
 
 .pros-card-image {
   margin: 0 auto;
+}
+
+.pros-card-image.api {
+  width: 225px;
+}
+
+.pros-card-image.client-service {
+  width: 205px;
+}
+
+.pros-card-image.tariffs {
+  width: 128px;
 }
 
 .pros-card-subtitle-green {
@@ -1068,6 +1105,34 @@ li {
 
   border: 1px solid var(--mt-light-grey);
   border-radius: 15px;
+}
+
+.footer-payment-qiwi {
+  width: 24px;
+}
+
+.footer-payment-webmoney {
+  width: 22px;
+}
+
+.footer-payment-mastercard {
+  width: 26px;
+}
+
+.footer-payment-yoomoney {
+  width: 27px;
+}
+
+.footer-payment-ton {
+  width: 25px;
+}
+
+.footer-payment-visa {
+  width: 40px;
+}
+
+.footer-payment-mir {
+  width: 52px;
 }
 
 .footer-brand {
@@ -1182,27 +1247,22 @@ li {
 
   .trust-image.mailru {
     width: 90px;
-    height: 37px;
   }
 
   .trust-image.odnoklassniki {
     width: 125px;
-    height: 35px;
   }
 
   .trust-image.vkontakte {
     width: 100px;
-    height: 17px;
   }
 
   .trust-image.backit {
     width: 60px;
-    height: 25px;
   }
 
   .trust-image.kazanexpress {
     width: 110px;
-    height: 15px;
   }
 }
 
@@ -1217,6 +1277,10 @@ li {
 
   .container {
     padding: 0 40px;
+  }
+
+  .header-logo {
+    width: 109px;
   }
 
   /* ******** HEADER ******** */
@@ -1241,16 +1305,8 @@ li {
     align-items: center;
   }
 
-  .burger-close-icon {
-    display: none;
-  }
-
   .burger-icon.menu-active {
-    display: none;
-  }
-
-  .burger-close-icon.menu-active {
-    display: block;
+    
   }
 
   .header-navigation-mobile {
@@ -1269,8 +1325,8 @@ li {
     height: 100%;
     width: 300px;
 
-    transform: translateX(-500%);
-    transition: transform .3s;
+    transform: translateX(-200%);
+    transition: transform .5s ease-in-out;
 
     z-index: 100;
   }
@@ -1390,14 +1446,25 @@ li {
 
   /* ******** LEGALLY ******** */
 
+  .legally-container {
+    background-position-x: 385px;
+    background-position-y: center;
+  }
+
   .legally-cards-wrapper {
     right: 25px;
     top: 25px;
   }
 
-  .legally-card-image {
+  .legally-card-image.first {
     width: 165px;
-    height: 235px;
+
+    right: 80px;
+    top: 40px;
+  }
+
+  .legally-card-image.second {
+    width: 165px;
   }
 
   .legally-typography-title {
@@ -1415,6 +1482,10 @@ li {
   }
 
   /* ******** VIDEO-PLAYER ******** */
+
+  .video-container {
+    background-position-x: 600px;
+  }
 
   .video-typography,
   .legally-typography {
@@ -1724,7 +1795,7 @@ li {
     position: absolute;
 
     right: 80px;
-    top: 45px;
+    top: 40px;
   }
 
   .legally-card-image.second {
@@ -1983,5 +2054,33 @@ li {
 
   .footer-payment-methods {
     padding: 15px 20px;
+  }
+
+  .footer-payment-qiwi {
+    width: 20px;
+  }
+  
+  .footer-payment-webmoney {
+    width: 20px;
+  }
+  
+  .footer-payment-mastercard {
+    width: 25px;
+  }
+  
+  .footer-payment-yoomoney {
+    width: 27px;
+  }
+  
+  .footer-payment-ton {
+    width: 22px;
+  }
+  
+  .footer-payment-visa {
+    width: 40px;
+  }
+  
+  .footer-payment-mir {
+    width: 48px;
   }
 }
