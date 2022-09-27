@@ -324,6 +324,10 @@ li {
   align-items: flex-end;
 }
 
+.header-navigation-list.right {
+  grid-template-columns: auto auto auto 40px;
+}
+
 .header-navigation-list.right .header-navigation-item .signin,
 .mobile-navigation-list.top, .mobile-navigation-item .signin {
   color: var(--mt-green);
@@ -357,8 +361,7 @@ li {
 
 .header-burger {
   display: none;
-
-  cursor: pointer;
+  justify-content: end;
 }
 
 .header-language-button {
@@ -733,6 +736,8 @@ li {
 
 .video-player-image {
   position: absolute;
+
+  width: 460px;
 
   bottom: 40px;
   right: 80px;
@@ -1312,6 +1317,8 @@ li {
 
     width: 40px;
     height: 12px;
+
+    cursor: pointer;
   }
 
   .burger-icon span {
@@ -1737,6 +1744,10 @@ li {
     grid-template-columns: minmax(min-content, max-content) 1fr;
 
     margin-bottom: 50px;
+  }
+
+  .header-navigation-list.right {
+    grid-template-columns: auto 40px;
   }
 
   .header-navigation-list.right .header-navigation-item:first-child,
