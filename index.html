@@ -13,23 +13,23 @@
       <!-- MODALS -->      
       <div class="expectation-modal-container" id="expectation-modal">
         <div class="expectation-modal-wrapper">
-          <svg class="expectation-modal-close" width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="expectation-modal-close-button" width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="1.52173" width="21.0488" height="1.57866" transform="rotate(45 1.52173 0)" fill="#00AB6D"/>
             <rect width="21.0488" height="1.57866" transform="matrix(-0.707107 0.707107 0.707107 0.707107 15.2893 0)" fill="#00AB6D"/>
           </svg>         
           <h2 class="expectation-modal-typography-title mt-h2">Спасибо</h2>
-          <p class="mt-text">мы скоро напишем вам, подождите, пожалуйста, 10 минут</p>
+          <p class="mt-text">Мы свяжемся с вами в ближайшее время</p>
         </div>
       </div>
       <div class="application-modal-container" id="application-modal">
         <div class="application-modal-wrapper">
-          <svg class="application-modal-close" width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="application-modal-close-button" width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="1.52173" width="21.0488" height="1.57866" transform="rotate(45 1.52173 0)" fill="#00AB6D"/>
             <rect width="21.0488" height="1.57866" transform="matrix(-0.707107 0.707107 0.707107 0.707107 15.2893 0)" fill="#00AB6D"/>
           </svg>  
           <div class="application-modal-typography">
-            <h2 class="application-modal-typography-title mt-h2">Оставить заявку</h2>
-            <p class="mt-text">Напишите ваши данные и наш менеджер свяжеться с вами</p>
+            <h2 class="application-modal-typography-title mt-h2">Оставьте заявку</h2>
+            <p class="mt-text">Напишите ваши контактные данные, менеджер свяжется с вами в ближайшее время</p>
           </div>
           <div class="application-modal-form">
             <div class="application-form-inputs-wrapper">
@@ -67,11 +67,10 @@
             <div class="application-checkbox-wrapper">
               <input class="application-checkbox" type="checkbox" checked />
               <p class="application-checkbox-term mt-text-small">
-                Я согласен с пользовательским соглашениеми политикой обработки
-                персональных данных
+                Я согласен с пользовательским соглашением и политикой обработки персональных данных
               </p>
             </div>
-            <button class="application-form-button mt-button">Получить бесплатно</button>
+            <button class="application-form-button mt-round-button" id="expectation-modal-open-button">Получить бесплатно</button>
           </div>
         </div>
       </div>
@@ -154,8 +153,9 @@
               <span class="mt-menu signin">Вход</span>
             </li>
             <li class="header-navigation-item language">
-              <p class="mt-menu">Ru</p>
+              <button class="header-language-button mt-button">Ru</button>
               <svg
+                class="dropdown-icon"
                 width="8"
                 height="4"
                 viewBox="0 0 8 4"
@@ -167,12 +167,17 @@
                   fill="#212628"
                 />
               </svg>
+              <ul class="header-language-menu">
+                <li class="header-language-item mt-menu">Ru</li>
+                <li class="header-language-item mt-menu">En</li>
+              </ul>
             </li>
             <li class="header-navigation-item">
               <p class="mt-menu">8 (800) 505-77-52</p>
             </li>
             <li class="header-navigation-item header-burger">
               <svg
+                class="burger-icon"
                 width="40"
                 height="11"
                 viewBox="0 0 40 11"
@@ -182,8 +187,113 @@
                 <rect width="40" height="3" fill="#00AB6D" />
                 <rect x="18" y="8" width="22" height="3" fill="#00AB6D" />
               </svg>
+              <svg class="burger-close-icon" width="22" height="22" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1.52173" width="21.0488" height="1.57866" transform="rotate(45 1.52173 0)" fill="#00AB6D"/>
+                <rect width="21.0488" height="1.57866" transform="matrix(-0.707107 0.707107 0.707107 0.707107 15.2893 0)" fill="#00AB6D"/>
+              </svg>  
             </li>
           </ul>
+        </nav>
+        <nav class="header-navigation-mobile" id="menu-mobile">
+          <div class="mobile-navigation-wrapper">
+            <svg
+            class="mobile-menu-logo"
+            viewBox="0 0 138 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <path
+              d="M25.4212 9.2525V29.1167H20.8638V17.5667L7.07384 9.2525V29.1167H2.51733V9.2525H7.07384L20.8638 17.5667V9.2525H25.4212V9.2525ZM39.0438 14.9275H43.316V29.1167H39.0438V27.7833C38.0377 28.9375 36.6226 29.5142 34.8001 29.5142C32.92 29.5142 31.3158 28.795 29.9869 27.3575C28.657 25.9008 27.993 24.1225 27.993 22.0225C27.993 19.9225 28.6579 18.1533 29.9869 16.7158C31.3158 15.2592 32.92 14.5308 34.8001 14.5308C36.6234 14.5308 38.0369 15.1075 39.0438 16.2617V14.9283V14.9275ZM33.2052 24.5483C33.8325 25.1725 34.6479 25.4842 35.6541 25.4842C36.661 25.4842 37.4773 25.1725 38.1046 24.5483C38.7302 23.9233 39.0438 23.0817 39.0438 22.0225C39.0438 20.9633 38.7302 20.1208 38.1038 19.4967C37.4765 18.8717 36.661 18.56 35.6549 18.56C34.6479 18.56 33.8316 18.8725 33.2044 19.4967C32.5788 20.1217 32.2651 20.9633 32.2651 22.0217C32.2651 23.0817 32.5788 23.9233 33.2052 24.5483V24.5483ZM56.789 9.2525H61.0611V29.1167H56.789V27.7833C55.7828 28.9375 54.3677 29.5142 52.5453 29.5142C50.6651 29.5142 49.061 28.795 47.732 27.3575C46.4022 25.9008 45.7381 24.1225 45.7381 22.0225C45.7381 19.9225 46.403 18.1533 47.732 16.7158C49.061 15.2592 50.6651 14.5308 52.5453 14.5308C54.3685 14.5308 55.782 15.1075 56.789 16.2617V9.2525V9.2525ZM50.9503 24.5483C51.5776 25.1725 52.393 25.4842 53.3992 25.4842C54.4062 25.4842 55.2225 25.1725 55.8497 24.5483C56.4753 23.9233 56.789 23.0817 56.789 22.0225C56.789 20.9633 56.4753 20.1208 55.8489 19.4967C55.2225 18.8717 54.4062 18.56 53.4 18.56C52.393 18.56 51.5768 18.8725 50.9495 19.4967C50.3239 20.1217 50.0102 20.9633 50.0102 22.0217C50.0102 23.0817 50.3239 23.9233 50.9503 24.5483V24.5483ZM68.0121 23.725C68.5056 25.05 69.6447 25.7117 71.4295 25.7117C72.5879 25.7117 73.4995 25.3517 74.1644 24.6333L77.5818 26.5917C76.1767 28.54 74.1067 29.5142 71.3726 29.5142C68.9806 29.5142 67.0629 28.805 65.6193 27.3858C64.195 25.9667 63.4832 24.1792 63.4832 22.0225C63.4832 19.8842 64.1858 18.1058 65.5909 16.6875C67.0152 15.2492 68.8376 14.5308 71.059 14.5308C73.129 14.5308 74.8477 15.2492 76.2144 16.6875C77.6002 18.1058 78.2936 19.8842 78.2936 22.0225C78.2969 22.5944 78.2397 23.1651 78.1229 23.725H68.0113H68.0121ZM67.926 20.5467H74.0498C73.6317 19.0525 72.6255 18.305 71.0306 18.305C69.3788 18.305 68.3442 19.0517 67.926 20.5467Z"
+              fill="#2980BA"
+            />
+            <path
+              d="M94.7282 9.05V13.42H89.6013V28.9142H85.0448V13.42H79.9178V9.05H94.7282V9.05ZM104.361 14.725H108.633V28.9142H104.361V27.5808C103.354 28.735 101.939 29.3117 100.117 29.3117C98.2367 29.3117 96.6326 28.5925 95.3036 27.155C93.9746 25.6983 93.3097 23.92 93.3097 21.82C93.3097 19.72 93.9746 17.9508 95.3036 16.5133C96.6326 15.0567 98.2367 14.3283 100.117 14.3283C101.939 14.3283 103.354 14.905 104.361 16.0592V14.7258V14.725ZM98.5219 24.3458C99.1484 24.97 99.9647 25.2817 100.971 25.2817C101.978 25.2817 102.794 24.97 103.421 24.3458C104.047 23.7208 104.361 22.8792 104.361 21.82C104.361 20.7608 104.047 19.9183 103.421 19.2942C102.794 18.6692 101.978 18.3575 100.971 18.3575C99.9647 18.3575 99.1484 18.67 98.5219 19.2942C97.8955 19.9192 97.5819 20.7608 97.5819 21.8192C97.5819 22.8792 97.8955 23.7208 98.5219 24.3458V24.3458ZM115.672 18.8683C115.672 19.1517 115.909 19.3892 116.384 19.5783C116.878 19.7483 117.466 19.9283 118.15 20.1175C118.849 20.2929 119.535 20.5205 120.2 20.7983C120.884 21.0817 121.463 21.555 121.938 22.2175C122.432 22.86 122.679 23.6742 122.679 24.6575C122.679 26.1908 122.109 27.3533 120.97 28.1483C119.83 28.9233 118.425 29.3117 116.755 29.3117C113.755 29.3117 111.713 28.1867 110.631 25.935L114.333 23.835C114.713 24.9517 115.52 25.5092 116.755 25.5092C117.78 25.5092 118.293 25.2158 118.293 24.6292C118.293 24.3458 118.045 24.1092 117.552 23.92C116.985 23.702 116.405 23.5219 115.815 23.3808C115.117 23.1866 114.432 22.9495 113.764 22.6708C113.081 22.3683 112.492 21.905 111.998 21.2808C111.523 20.6558 111.286 19.89 111.286 18.9817C111.286 17.5067 111.818 16.3617 112.881 15.5483C113.963 14.735 115.293 14.3283 116.868 14.3283C118.045 14.3283 119.118 14.5925 120.087 15.1225C121.055 15.6333 121.834 16.3808 122.422 17.3642L118.776 19.3225C118.321 18.49 117.685 18.0742 116.868 18.0742C116.071 18.0742 115.672 18.3392 115.672 18.8683V18.8683ZM138.483 28.9142H133.641L129.083 22.6425V28.9142H124.811V9.05H129.083V20.9392L133.356 14.7242H138.34L133.157 21.8192L138.483 28.9142ZM6.1464 8L15.3531 17.1725L12.2059 20.3075L3 11.135L6.1464 8Z"
+              fill="#00AB6D"
+            />
+            <path
+              d="M23.4952 2.50836L11.7192 14.2417L14.8665 17.3767L26.6425 5.64336L23.4952 2.50836V2.50836Z"
+              fill="#00AB6D"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M5.66385 5.69417L11.7225 11.73L23.4951 0L29.1598 5.64333L17.3863 17.375L11.7233 23.0192L0 11.3375L5.66385 5.69417ZM14.8705 17.375V17.3742L26.6415 5.64333L23.4951 2.50833L11.7225 14.2383L5.66385 8.2025L2.51745 11.3375L11.7233 20.51L14.8697 17.375H14.8705Z"
+              fill="white"
+            />
+          </svg>
+            <ul class="mobile-navigation-list top">
+              <li class="mobile-navigation-item">
+                <p class="mt-menu">О сервисе</p>
+              </li>
+              <li class="mobile-navigation-item whom">
+                <p class="mt-menu">Для кого</p>
+                <svg
+                width="8"
+                height="4"
+                viewBox="0 0 8 4"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.00008 4.00002L0.666748 0.666687H7.33341L4.00008 4.00002Z"
+                  fill="#212628"
+                />
+                </svg>
+              </li>
+              <li class="mobile-navigation-item">
+                <p class="mt-menu">Тарифы</p>
+              </li>
+              <li class="mobile-navigation-item">
+                <p class="mt-menu">Контакты</p>
+              </li>
+              <li class="mobile-navigation-item telegram">
+                <svg
+                width="15"
+                height="14"
+                viewBox="0 0 15 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.6866 0.22767C14.4316 0.0114301 14.0311 -0.0195098 13.617 0.14675H13.6163C13.1808 0.32151 1.28757 5.42287 0.80341 5.63129C0.71535 5.66189 -0.0537296 5.94885 0.0254904 6.58805C0.0962104 7.16435 0.71433 7.40303 0.78981 7.43057L3.81343 8.46587C4.01403 9.13363 4.75353 11.5973 4.91707 12.1236C5.01907 12.4517 5.18533 12.8828 5.47671 12.9716C5.73239 13.0702 5.98671 12.9801 6.15127 12.8509L7.99985 11.1362L10.984 13.4635L11.0551 13.506C11.2577 13.5958 11.4519 13.6407 11.6372 13.6407C11.7803 13.6407 11.9177 13.6138 12.0489 13.5601C12.496 13.3765 12.6749 12.9505 12.6936 12.9022L14.9226 1.31601C15.0586 0.69721 14.8696 0.38237 14.6866 0.22767ZM6.48005 8.87999L5.46005 11.6L4.44005 8.19999L12.2601 2.41999L6.48005 8.87999Z"
+                  fill="#1299F2"
+                />
+              </svg>
+                <p class="header-typography-telegram mt-menu">Написать в телеграм</p>
+              </li>
+            </ul>
+            <span class="mobile-navigation-separator"></span>
+            <ul class="mobile-navigation-list bottom">
+              <li class="mobile-navigation-item auth">
+                <span class="mt-menu">Регистрация</span>
+                <span class="mt-menu slash">/</span>
+                <span class="mt-menu signin">Вход</span>
+              </li>
+              <li class="mobile-navigation-item phone">
+                <p class="mt-menu">8 (800) 505-77-52</p>
+              </li>
+              <li class="mobile-navigation-item language">
+                <button class="header-language-button mt-button">Ru</button>
+                <svg
+                  class="dropdown-icon"
+                  width="8"
+                  height="4"
+                  viewBox="0 0 8 4"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.00008 4.00002L0.666748 0.666687H7.33341L4.00008 4.00002Z"
+                    fill="#212628"
+                  />
+                </svg>
+                <ul class="header-language-menu">
+                  <li class="header-language-item mt-menu">Ru</li>
+                  <li class="header-language-item mt-menu">En</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </nav>
       </header>
       <!---->
@@ -192,14 +302,16 @@
       <main class="main-container">
         <div class="intro-container">
           <h1 class="intro-title mt-h1">
-            Сервис для выплат исполнителям-физлицам по всему миру
+            Сервис для выплат внештатным исполнителям по всему миру
           </h1>
+          <h2 class="intro-title-mobile mt-h2">
+            Сервис для выплат внештатным исполнителям по всему миру
+          </h2>
           <div class="intro-subtitle">
             <p class="intro-lable mt-text">
-              Упрощаем работу компаний, помогаем организовать работу с физлицами
-              и самозанятыми исполнителями.
+              Упрощаем работу компаний, помогаем организовать работу с физлицами и самозанятыми исполнителями.
             </p>
-            <button class="intro-button mt-button">
+            <button class="intro-button mt-round-button" id="application-modal-open-button">
               Получить демонстрацию
             </button>
           </div>
@@ -244,12 +356,12 @@
                   />
                 </svg>
                 <span class="mt-text-bold">
-                  Отправьте деньги в любую страну, в любой валюте
+                  Получите акты от подрядчиков одним кликом
                 </span>
               </div>
               <p class="intro-card-ordinal mt-text-bold">02</p>
             </div>
-            <img class="intro-card-image" src="./assets/images/Checks.png" />
+            <img class="intro-card-image" src="./assets/images/Acts.png" />
           </div>
           <div class="intro-card-item">
             <div class="intro-card-typography">
@@ -267,7 +379,7 @@
                   />
                 </svg>
                 <p class="mt-text-bold">
-                  Отправьте деньги в любую страну, минуя ограничения
+                  Отправьте деньги в любую страну, в любой валюте
                 </p>
               </div>
               <span class="intro-card-ordinal mt-text-bold">03</span>
@@ -297,28 +409,26 @@
         <div class="legally-container">
           <div class="legally-typography">
             <h2 class="legally-typography-title mt-h2">
-              MadeTask работает <br />
-              абсолютно <span>легально</span>
+              Действуем в соответствии с законодательством
             </h2>
             <span class="legally-typography-subtitle mt-text">
-              Это подтверждено письмом Министерства финансов РФ №03-04-06/53027 от 05.07.2021
+              Это, в частности, подтверждается на основании письма Минфина № 03-04-06/53027 от 05.07.2021
             </span>
-            <a class="legally-download mt-text-bold">
+            <button class="legally-download-button mt-button">
               <svg
-                class="file-download"
+                class="download-icon"
                 width="16"
                 height="16"
                 viewBox="0 0 16 16"
-                fill="none"
+                fill="#00AB6D"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196 15.021 0 14.55 0 14V11H2V14H14V11H16V14C16 14.55 15.8043 15.021 15.413 15.413C15.021 15.8043 14.55 16 14 16H2ZM8 12L3 7L4.4 5.55L7 8.15V0H9V8.15L11.6 5.55L13 7L8 12Z"
-                  fill="#00AB6D"
                 />
               </svg>
               Скачать письмо
-            </a>
+            </button>
           </div>
           <div class="legally-cards">
             <div class="legally-cards-wrapper">
@@ -335,8 +445,7 @@
         </div>
         <div class="fit-container">
           <h2 class="fit-title mt-h2">
-            MadeTask отлично <br />
-            подойдет вам, если:
+            MadeTask отлично подойдет вам, если:
           </h2>
           <ul class="fit-list">
             <li class="fit-item">
@@ -359,8 +468,7 @@
                   Вы работаете на общей системе налогообложения
                 </h3>
                 <p class="mt-text">
-                  Мы работаем с НДС, который ваша компания сможет принять к
-                  вычету.
+                  Мы работаем с НДС, который ваша компания сможет принять к вычету.
                 </p>
               </div>
             </li>
@@ -381,12 +489,10 @@
               </div>
               <div class="fit-typography">
                 <h3 class="fit-typography-title mt-h3">
-                  Мы выступим вашим генеральным подрядчиком, а вы получите
-                  закрывающие документы
+                  Вы хотите платить исполнителям-физлицам со счета компании.
                 </h3>
                 <p class="mt-text">
-                  Мы работаем с НДС, который ваша компания сможет принять к
-                  вычету.
+                  Мы выступим вашим генеральным подрядчиком, а вы получите закрывающие документы
                 </p>
               </div>
             </li>
@@ -410,8 +516,7 @@
                   Вам нужно переводить деньги исполнителям в другие страны.
                 </h3>
                 <p class="mt-text">
-                  Мы поможем вам перевести деньги в большинство стран мира,
-                  минуя ограничения.
+                  Мы поможем вам перевести деньги в большинство стран мира, минуя ограничения.
                 </p>
               </div>
             </li>
@@ -435,8 +540,7 @@
                   Вам нужно получать авторские (исключительные) права на работы.
                 </h3>
                 <p class="mt-text">
-                  В MadeTask возможно оформить передачу исключительных прав за
-                  один клик.
+                  В MadeTask возможно оформить передачу исключительных прав за один клик.
                 </p>
               </div>
             </li>
@@ -445,12 +549,10 @@
         <div class="video-container">
           <div class="video-typography">
             <h2 class="video-typography-title mt-h2">
-              Посмотрите видео <br />
-              о сервисе MadeTask
+              Посмотрите видео о сервисе MadeTask
             </h2>
             <p class="mt-text">
-              Вы узнаете как работает система и сможете узнать подходит ли она
-              вам
+              Вы узнаете как работает система и сможете узнать, подходит ли она вам
             </p>
           </div>
           <img
@@ -458,16 +560,83 @@
             src="./assets/images/VideoPlayer.png"
           />
         </div>
-        <div class="calculator-container"></div>
+        <div class="calculator-container">
+          <div class="calculator-typography">
+            <h2 class="calculator-typography-title mt-h2">
+              Рассчитайте выгоду от использования MadeTask
+            </h2>
+          </div>
+          <div class="calculator-form">
+            <div class="calculator-sliders">
+              <div class="calculator-sliders-item">
+                <div>
+                  <div class="mt-text">сумма вознагрождения исполнителю</div>
+                  <div class="calculator-sliders-item-value mt-h3">100 000 ₽</div>
+                  <input type="range" class="calculator-slider"/>
+                </div>
+                <div class="calculator-sliders-toggle">
+                  <span data-active="false">$ USD</span>
+                  <span data-active="true">₽ RUB</span>
+                </div>
+              </div>
+              <div class="calculator-sliders-item">
+                <div class="mt-text">комиссия сервиса</div>
+                <div class="calculator-sliders-item-value mt-h3">9 %</div>
+                <input type="range" class="calculator-slider"/>
+              </div>
+              <div class="calculator-sliders-vat">
+                <div class="mt-text">сможете принять НДС к вычету</div>
+                <div class="calculator-sliders-vat-wrapper">
+                  <div class="calculator-sliders-toggle">
+                    <span data-active="false">Да</span>
+                    <span data-active="true">Нет</span>
+                  </div>
+                  <div class="mt-text-small">Если компания на общей системе налогообложения, то вы сможете уменьшить НДС на эту сумму для уплаты в бюджет и сэкономить</div>
+                </div>
+              </div>
+            </div>
+            <div class="calculator-allResults">
+              <div class="calculator-common-results">
+                <div class="calculator-common-results-item">
+                  <div class="mt-text-bold">146 091 Р</div>
+                  <div class="mt-text">Сумма по договору ГПХ</div>
+                </div>
+                <div class="calculator-common-results-item">
+                  <div class="mt-text-bold">149 654 Р</div>
+                  <div class="mt-text">Сумма при официальном трудоустройстве</div>
+                </div>
+              </div>
+              <div class="calculator-results-block">
+                <div class="calculator-result">
+                  <div class="mt-text">итоговая сумма с НДС и комиссией MadeTask</div>
+                  <div class="calculator-sumAndVat">
+                    <div class="calculator-result-sum mt-h2">130 800</div>
+                    <div class="calculator-sum-ruble mt-h3">₽</div>
+                    <div class="calculator-vat mt-h3">(НДС 21 800)</div>
+                  </div>
+                </div>
+                <hr class="separator-dotted" />
+                <div class="calculator-profit">
+                  <div class="calculator-profit-item">
+                    <h3 class="mt-h3">на 25%</h3>
+                    <p class="mt-text">дешевле чем на ГПХ</p>
+                  </div>
+                  <div class="calculator-profit-item">
+                    <h3 class="mt-h3">на 27%</h3>
+                    <p class="mt-text">дешевле чем ТК РФ</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="payment-container">
           <div class="payment-typography">
             <h2 class="payment-typography-title mt-h2">
-              Попробуйте сервис, <br />
-              проведите <span>первый платеж без комиссии</span>
+              Попробуйте сервис, проведите <span>первый платеж без комиссии</span>
             </h2>
             <p class="mt-text">
-              Вы можете сделать первую выплату исполнителю до 100 000 Р
-              бесплатно, без комиссии.
+              Вы можете сделать первую выплату исполнителю до 100 000 Р без комиссии сервиса.
             </p>
           </div>
           <div class="payment-form">
@@ -476,12 +645,11 @@
                 width="22"
                 height="18"
                 viewBox="0 0 22 18"
-                fill="none"
+                fill="#C8D9DE"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M2.33341 17.3678C1.73758 17.3678 1.22769 17.1558 0.803748 16.7318C0.379081 16.3072 0.166748 15.7969 0.166748 15.2011V2.20109C0.166748 1.60526 0.379081 1.09537 0.803748 0.671424C1.22769 0.246757 1.73758 0.0344238 2.33341 0.0344238H19.6667C20.2626 0.0344238 20.7728 0.246757 21.1975 0.671424C21.6214 1.09537 21.8334 1.60526 21.8334 2.20109V15.2011C21.8334 15.7969 21.6214 16.3072 21.1975 16.7318C20.7728 17.1558 20.2626 17.3678 19.6667 17.3678H2.33341ZM11.0001 9.78442L19.6667 4.36776V2.20109L11.0001 7.61776L2.33341 2.20109V4.36776L11.0001 9.78442Z"
-                  fill="#C8D9DE"
                 />
               </svg>
               <input class="payment-input" placeholder="Ваш email" />
@@ -491,30 +659,27 @@
                 width="20"
                 height="21"
                 viewBox="0 0 20 21"
-                fill="none"
+                fill="#C8D9DE"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M17.5833 10.647C17.5833 8.53447 16.8474 6.74228 15.3755 5.27039C13.9043 3.79922 12.1125 3.06364 10 3.06364V0.896973C11.3542 0.896973 12.6227 1.15408 13.8057 1.66831C14.988 2.18325 16.0172 2.87875 16.8933 3.75481C17.7686 4.63014 18.4637 5.65931 18.9787 6.84231C19.4929 8.02458 19.75 9.29281 19.75 10.647H17.5833ZM13.25 10.647C13.25 9.74419 12.934 8.97683 12.3021 8.34489C11.6701 7.71294 10.9028 7.39697 10 7.39697V5.23031C11.4986 5.23031 12.7762 5.75825 13.8328 6.81414C14.8887 7.87075 15.4167 9.14836 15.4167 10.647H13.25ZM18.6125 20.4511C16.2833 20.4511 14.013 19.9319 11.8016 18.8933C9.58942 17.8555 7.63039 16.4833 5.9245 14.7766C4.21789 13.0708 2.84567 11.1117 1.80783 8.89956C0.769278 6.68811 0.25 4.41781 0.25 2.08864C0.25 1.76364 0.358333 1.49281 0.575 1.27614C0.791667 1.05947 1.0625 0.951139 1.3875 0.951139H5.775C6.02778 0.951139 6.25347 1.03239 6.45208 1.19489C6.6507 1.35739 6.76806 1.56503 6.80417 1.81781L7.50833 5.60947C7.54444 5.86225 7.54011 6.09228 7.49533 6.29956C7.44983 6.50756 7.34583 6.69281 7.18333 6.85531L4.58333 9.50947C5.34167 10.8095 6.28958 12.0282 7.42708 13.1657C8.56458 14.3032 9.81945 15.2872 11.1917 16.1178L13.7375 13.572C13.9 13.4095 14.1123 13.2874 14.3745 13.2058C14.6359 13.1249 14.8931 13.1025 15.1458 13.1386L18.8833 13.897C19.1361 13.9511 19.3438 14.0728 19.5063 14.2621C19.6688 14.452 19.75 14.6734 19.75 14.9261V19.3136C19.75 19.6386 19.6417 19.9095 19.425 20.1261C19.2083 20.3428 18.9375 20.4511 18.6125 20.4511Z"
-                  fill="#C8D9DE"
                 />
               </svg>
               <input class="payment-input" placeholder="Ваш телефон" />
             </div>
-            <button class="payment-button mt-button">Получить бесплатно</button>
+            <button class="payment-button mt-round-button">Получить бесплатно</button>
           </div>
           <div class="payment-checkbox-wrapper">
             <input class="payment-checkbox" type="checkbox" checked />
             <p class="payment-term mt-text">
-              Я согласен с пользовательским соглашениеми политикой обработки
-              персональных данных
+              Я согласен с пользовательским соглашением и политикой обработки персональных данных
             </p>
           </div>
         </div>
         <div class="pros-container">
           <h2 class="pros-title mt-h2">
-            Почему компании <br />
-            выбирают MadeTask?
+            Почему компании выбирают MadeTask?
           </h2>
           <div class="pros-cards">
             <div class="pros-card-item">
@@ -524,8 +689,7 @@
               />
               <div class="pros-card-typography">
                 <h3 class="pros-card-title mt-h3">
-                  Лучший клиентский <br />
-                  сервис 24/7.
+                  Лучший клиентский сервис 24/7.
                 </h3>
                 <p class="mt-text">
                   Мы обрабатываем и отвечаем на все ваши обращения без
@@ -537,12 +701,10 @@
               <img class="pros-card-image" src="./assets/images/Api.png" />
               <div class="pros-card-typography">
                 <h3 class="pros-card-title mt-h3">
-                  Глубокая интеграция <br />
-                  в ваш бизнес
+                  Глубокая интеграция в ваш бизнес
                 </h3>
                 <p class="mt-text">
-                  Мы можем интегрировать MadeTask в ваши бизнес-решения по API и
-                  сделать совместную работу еще удобнее.
+                  Мы можем интегрировать MadeTask в ваши бизнес-решения по API и сделать совместную работу еще удобнее.
                 </p>
               </div>
             </div>
@@ -550,8 +712,7 @@
               <img class="pros-card-image" src="./assets/images/Tariffs.png" />
               <div class="pros-card-typography">
                 <h3 class="pros-card-title mt-h3">
-                  Тарифы ниже, <br />
-                  чем у других сервисов.
+                  Тарифы ниже, чем у других сервисов.
                 </h3>
                 <p class="mt-text">
                   Вы уже работаете с подобными сервисами?
@@ -595,7 +756,7 @@
               />
             </svg>
             <p class="footer-title mt-text">
-              Сервис по выплатам исполнителям-физлицам по всему миру
+              Сервис для выплат внештатным исполнителям по всему миру
             </p>
             <div class="footer-payment-methods">
               <img class="footer-payment-qiwi" src="./assets/images/Qiwi.png" />
@@ -689,5 +850,6 @@
     </div>
 
     <script src="./scripts/modal.js"></script>
+    <script src="./scripts/mobile-menu.js"></script>
   </body>
 </html>
