@@ -734,132 +734,63 @@ li {
 
 /* ******** SLIDER ******** */
 .calculator-slider {
+  display: block;
+  -webkit-appearance: none;
+  background-color: #E9E9E9;
   width: 100%;
-  --thumb-height: 14px;
-  --thumb-width: 14px;
-	--track-height: 3px;
-	--track-color: #E9E9E9;
-
-  color: var(--mt-blue);
-  --clip-edges: 0.0125em;
-
-  position: relative;
-  background: #fff0;
-  overflow: hidden;
+  height: 5px;
+  border-radius: 5px;
+  outline: 0;
 }
 
 .calculator-slider:active {
 	cursor: grabbing;
 }
 
-.calculator-slider,
-.calculator-slider::-webkit-slider-runnable-track,
 .calculator-slider::-webkit-slider-thumb {
-	-webkit-appearance: none;
-	transition: all ease 100ms;
-	height: var(--thumb-height);
+  -webkit-appearance: none;
+  background-color: #2980BA;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
-
-.calculator-slider::-webkit-slider-runnable-track,
-.calculator-slider::-webkit-slider-thumb {
-	position: relative;
+.calculator-slider::-webkit-slider-thumb:hover {
+  width: 19px;
+  height: 19px;
+  border: 4px solid white;
 }
-
-.calculator-slider::-webkit-slider-thumb {
-	--thumb-radius: calc((var(--thumb-height) * 0.5) - 1px);
-	--clip-top: calc((var(--thumb-height) - var(--track-height)) * 0.5 - 0.5px);
-	--clip-bottom: calc(var(--thumb-height) - var(--clip-top));
-	--clip-further: calc(100% + 1px);
-	--box-fill: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0
-		100vmax currentColor;
-
-	width: var(--thumb-width, var(--thumb-height));
-	background: linear-gradient(currentColor 0 0) scroll no-repeat left center /
-		50% calc(var(--track-height) + 1px);
-	background-color: currentColor;
-	box-shadow: var(--box-fill);
-	border-radius: var(--thumb-width, var(--thumb-height));
-
-	filter: brightness(100%);
-	clip-path: polygon(
-		100% -1px,
-		var(--clip-edges) -1px,
-		0 var(--clip-top),
-		-100vmax var(--clip-top),
-		-100vmax var(--clip-bottom),
-		0 var(--clip-bottom),
-		var(--clip-edges) 100%,
-		var(--clip-further) var(--clip-further)
-	);
-}
-
-/* .calculator-slider:hover::-webkit-slider-thumb {
-  --thumb-height: 19px;
-  --thumb-width: 19px;
-	cursor: grab;
-} */
-
-.calculator-slider::-webkit-slider-runnable-track {
-	background: linear-gradient(var(--track-color) 0 0) scroll no-repeat center /
-		100% calc(var(--track-height) + 1px);
-}
-
-.calculator-slider,
-.calculator-slider::-moz-range-track,
 .calculator-slider::-moz-range-thumb {
-	appearance: none;
-	transition: all ease 100ms;
-	height: var(--thumb-height);
+  -webkit-appearance: none;
+  background-color: #2980BA;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
-
-.calculator-slider::-moz-range-track,
-.calculator-slider::-moz-range-thumb,
-.calculator-slider::-moz-range-progress {
-	background: #fff0;
+.calculator-slider::-moz-range-thumb:hover {
+  width: 19px;
+  height: 19px;
+  border: 4px solid white;
 }
-
-.calculator-slider::-moz-range-thumb {
-	background: currentColor;
-	border: 0;
-	width: var(--thumb-width, var(--thumb-height));
-	border-radius: var(--thumb-width, var(--thumb-height));
-	cursor: grab;
+.calculator-slider::-ms-thumb {
+  -webkit-appearance: none;
+  background-color: #2980BA;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
-
-.calculator-slider:active::-moz-range-thumb {
-	cursor: grabbing;
-}
-
-.calculator-slider::-moz-range-track {
-	width: 100%;
-	background: var(--track-color);
-}
-
-.calculator-slider::-moz-range-progress {
-	appearance: none;
-	background: currentColor;
-	transition-delay: 30ms;
-}
-
-.calculator-slider::-moz-range-track,
-.calculator-slider::-moz-range-progress {
-	height: calc(var(--track-height) + 1px);
-	border-radius: var(--track-height);
-}
-
-.calculator-slider::-moz-range-thumb,
-.calculator-slider::-moz-range-progress {
-	filter: brightness(100%);
-}
-
-.calculator-slider:hover::-moz-range-thumb,
-.calculator-slider:hover::-moz-range-progress {
-	filter: brightness(var(--brightness-hover));
-}
-
-.calculator-slider:active::-moz-range-thumb,
-.calculator-slider:active::-moz-range-progress {
-	filter: brightness(var(--brightness-down));
+.calculator-slider::-ms-thumb:hover {
+  width: 19px;
+  height: 19px;
+  border: 4px solid white;
 }
 
 /* ******** SLIDER END ******** */

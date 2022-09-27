@@ -572,7 +572,7 @@
                 <div>
                   <div class="mt-text">сумма вознагрождения исполнителю</div>
                   <div class="calculator-sliders-item-value mt-h3">100 000 ₽</div>
-                  <input type="range" class="calculator-slider"/>
+                  <input type="range" id="calculator-slider-1" class="calculator-slider" min="0" max="100" value="50" />
                 </div>
                 <div class="calculator-sliders-toggle">
                   <span data-active="false">$ USD</span>
@@ -582,7 +582,7 @@
               <div class="calculator-sliders-item">
                 <div class="mt-text">комиссия сервиса</div>
                 <div class="calculator-sliders-item-value mt-h3">9 %</div>
-                <input type="range" class="calculator-slider"/>
+                <input type="range" id="calculator-slider-2" class="calculator-slider" min="0" max="100" value="50" />
               </div>
               <div class="calculator-sliders-vat">
                 <div class="mt-text">сможете принять НДС к вычету</div>
@@ -851,5 +851,6 @@
 
     <script src="./scripts/modal.js"></script>
     <script src="./scripts/mobile-menu.js"></script>
+    <script src="./scripts/slider.js"></script>
   </body>
 </html>
