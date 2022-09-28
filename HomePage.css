@@ -34,6 +34,7 @@ li {
   --mt-white: #ffffff;
   --mt-background: #EBF6FF;
   --mt-light-grey: #9bbbd9; 
+  --mt-transparent-grey: #9bbbd940;
 }
 
 .scrollOff {
@@ -186,7 +187,7 @@ a:hover {
 
   z-index: 9999;
 
-  transition: all .3s;
+  transition: all .5s;
 }
 
 .expectation-modal-wrapper,
@@ -387,7 +388,7 @@ a:hover {
 }
 
 .header-typography-telegram:hover {
-  color: #1299f2;
+  color: #167EE1;
 }
 
 .header-logo {
@@ -443,7 +444,7 @@ a:hover {
 
   padding: 10px 12px;
 
-  border: 1px solid var(--mt-light-grey);
+  border: 1px solid var(--mt-transparent-grey);
   border-radius: 10px;
 
   left: 50%;
@@ -564,7 +565,7 @@ a:hover {
   padding: 70px 65px;
   margin-bottom: 100px;
 
-  border: 1px solid #9bbbd940;
+  border: 1px solid var(--mt-transparent-grey);
   border-radius: 15px;
 }
 
@@ -801,6 +802,10 @@ a:hover {
   transform: translate(calc(-50% + 5px), calc(-50% + 10px));
 }
 
+.video-playContainer image {
+  cursor: pointer;
+}
+
 .video-player-image {
   width: 460px;
 }
@@ -925,7 +930,18 @@ a:hover {
   justify-content: space-between;
   border: 1.5px solid rgba(33, 38, 40, 0.1);
   border-radius: 100px;
+}
+
+.calculator-sliders-toggle span {
   cursor: pointer;
+
+  transition: all .3s;
+}
+
+.calculator-sliders-toggle span:hover {
+  color: var(--mt-blue);
+
+  opacity: 1;
 }
 
 .calculator-sliders-vat-wrapper .calculator-sliders-toggle {
@@ -1100,7 +1116,7 @@ a:hover {
 
   grid-template-rows: 200px;
 
-  border: 1px solid #9bbbd940;
+  border: 1px solid var(--mt-transparent-grey);
   border-radius: 15px;
 
   max-width: 380px;
@@ -1126,6 +1142,10 @@ a:hover {
 
 .pros-card-subtitle-green {
   color: var(--mt-green);
+}
+
+.pros-card-subtitle-green:hover {
+  color: var(--mt-dark-green);
 }
 
 /* ******** FOOTER ******** */
@@ -1172,7 +1192,7 @@ a:hover {
   padding: 20px 30px;
   column-gap: 20px;
 
-  border: 1px solid var(--mt-light-grey);
+  border: 1px solid var(--mt-transparent-grey);
   border-radius: 15px;
 }
 
@@ -1273,7 +1293,7 @@ a:hover {
 
   padding: 20px 0 10px 96px;
 
-  border-left: 1px solid var(--mt-light-grey);
+  border-left: 1px solid var(--mt-transparent-grey);
 }
 
 .footer-contact-item {
@@ -1629,6 +1649,10 @@ a:hover {
 
   .video-player-image {
     width: 340px;
+  }
+
+  .video-playContainer {
+    width: 95px;
   }
 
   /* ******** CALCULATOR ******** */
