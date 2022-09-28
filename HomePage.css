@@ -328,6 +328,7 @@ a:hover {
 
   grid-template-columns: minmax(min-content, 235px) 1fr;
 
+  align-items: end;
   padding: 16px 0;
   margin-bottom: 110px;
 }
@@ -335,6 +336,9 @@ a:hover {
 .header-navigation-container {
   display: flex;
 
+  height: max-content;;
+
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -345,10 +349,11 @@ a:hover {
 .header-navigation-list {
   display: grid;
 
+  height: max-content;
   grid-auto-flow: column;
   column-gap: 40px;
 
-  align-items: flex-end;
+  align-items: center;
 }
 
 .header-navigation-list.right {
@@ -366,8 +371,7 @@ a:hover {
 }
 
 .header-navigation-item.telegram,
-.header-navigation-item.language,
-.header-navigation-item.whom {
+.header-navigation-item.language {
   display: grid;
 
   grid-auto-flow: column;
@@ -378,6 +382,7 @@ a:hover {
 }
 
 .header-typography-telegram {
+  line-height: 14px;
   color: #1299f2;
 }
 
